@@ -1,0 +1,22 @@
+<div [id]="task.id" class="card bg-white mx-2 rounded-lg p-4 cursor-move">
+  
+  <div class="flex justify-between items-baseline">
+    <calm-heading text="purple-darker" text-size="2xl">
+      {{ task.title }}
+    </calm-heading>
+    <button>
+      <img class="h-4 w-4" src="/assets/options-dots.svg" />
+    </button>
+  </div>
+
+  <div class="mb-8"></div>
+
+  <div>    
+    <div class="mb-8"></div>
+
+    <div class="flex justify-end items-center">
+      <img class="h-8 w-8 rounded-full" [src]="task.photoURL" alt="Photo URL" />
+    </div>
+
+
+  </div>

@@ -1,0 +1,18 @@
+
+<header class="flex justify-between items-end h-16 container mx-auto px-16">
+  <a href="/" class="hover:underline">    
+    <h4 class="font-display font-bold text-xl">
+      calmban
+    </h4>
+  </a>
+  <div *ngIf="user == undefined">
+    <h4 
+      (click)="sendSignIn()"
+      class="font-display font-bold text-xl text-purple hover:underline">
+      login
+    </h4>
+  </div>
+  <div *ngIf="user">
+    <img class="h-8 w-8 rounded-full" [src]="user.photoURL" alt="Profile URL" />
+  </div>
+</header>

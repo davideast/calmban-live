@@ -1,0 +1,31 @@
+<calm-header>
+</calm-header>
+
+<div class="container mx-auto p-16">
+
+  <calm-heading text="purple-darker" text-size="3xl">
+    My projects
+  </calm-heading>
+
+  <ng-template #loading>
+    <calm-ripple-spinner></calm-ripple-spinner>
+  </ng-template>
+  <div class="my-16" *ngIf="(projects$ | async) as projects; else loading">
+
+    <div *ngFor="let project of projects">
+
+      <div class="bg-grey-light h-32 w-full lg:w-1/2 xl:w-/12 p-8 mb-8 rounded-lg">
+
+        <a [routerLink]="createLink(project.id)">
+          <calm-heading text="purple-darker" text-size="xl">
+            {{ project.id }}
+          </calm-heading>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
